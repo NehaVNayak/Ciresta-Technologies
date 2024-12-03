@@ -1,0 +1,268 @@
+/*Header css*/
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+    position: relative; 
+
+    .logo {
+        font-size: 25px;
+        font-weight: 600;
+        color: #8a4baf;
+
+        @media(max-width: 768px) {
+            font-size: 18px;
+        }
+    }
+
+    .link {
+        display: flex;
+        gap: 2rem;
+
+        @media(max-width: 768px) {
+            gap: 0.5rem;
+        }
+        a {
+            text-decoration: none;
+            color: #333;
+            transition: 0.3s;
+
+            &:hover {
+                color: #8a4baf;
+            }
+        }
+    }
+}
+
+/*Index main part css*/
+.home {
+    background-color: #f5f5f5;
+    padding: 100px 0;
+    text-align: center;
+
+    .home-content {
+        max-width: 800px;
+        margin: 0 auto;
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+
+            @media (max-width: 768px) {
+                font-size: 28px;
+            }
+        }
+
+        p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 40px;
+
+            @media (max-width: 768px) {
+                font-size: 16px;
+            }
+        }
+
+        button {
+            padding: 12px 24px;
+        }
+    }
+}
+
+.highlight {
+    color: #8a4baf;
+    font-weight: bold; 
+}
+
+/*footer part css*/
+footer {
+    background-color: #8a5baf;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    bottom: 0;
+
+    .footer-content {
+        max-width: 1200p;
+        margin: 0 auto;
+        
+        p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .social-links {
+            margin-top: 10px;
+
+            a {
+                color: white;
+                font-size: 18px;
+                margin: 0 10px;
+                text-decoration: none;
+                transition: color .3s ease;
+
+                &:hover {
+                    color: #f5f5f5;
+                }
+            }
+        }
+    }
+}
+
+/*CSS for common button*/
+.common-btn {
+    background-color: #8a4baf;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color .3s ease;
+    margin-top: 10px;
+
+    &:hover {
+      background-color: #5f357e;
+    }
+
+    @media (max-width: 768) {
+      font-size: 16px;
+    }
+}
+
+/*testimonials css*/
+.testimonials {
+    padding: 0px 0;
+    text-align: center;
+
+    h2 {
+        font-size: 32px;
+        color: #8a4baf;
+        margin-bottom: 30px;
+    }
+
+    .testimonials-cards {
+        display: flex;
+        flex-wrap: wrap; /*To make the testimonials wrap, to make it responsive*/
+        justify-content: center;
+        gap: 30px;
+
+        .testimonial-card {
+            background-color: white;
+            box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @media(max-width: 768px) {
+                width: 80%;
+                text-align: center;
+            }
+
+            .traveler-image {
+                img {
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    margin-bottom: 10px;
+                }
+            }
+
+            .message {
+                font-size: 16px;
+                color: #333;
+                margin-bottom: 10px;
+            }
+
+            .info {
+                text-align: center;
+            }
+
+            .name {
+                font-size: 18px;
+                font-weight: bold;
+                color: #8a4baf;
+                margin-bottom: 5px;
+            }
+
+            .position {
+                font-size: 14px;
+                color: #666;
+            }
+        }
+    }
+}
+
+/*style for search.css*/
+.auth-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    background-color: white;
+
+    .auth-form {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+        text-align: center;
+        width: 300px;
+
+        h2 {
+            font-size: 24px;
+            color: #8a4baf;
+            margin-bottom: 15px;
+        }
+
+        form {
+            text-align: left;
+
+            label {
+                display: block;
+                margin-bottom: 5px;
+                font-size: 14px;
+                color: #333;
+            }
+
+            input {
+                width: 92%;
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+/*Ensure the sections are initially hidden */
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out, visibility 0s 1s;
+}
+
+/* When visible, the section should fade in */
+.visible {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s ease-in-out, visibility 0s;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Booking</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        .hidden {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 1s ease-in-out, visibility 0s 1s;
+        }
+        .visible {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 1s ease-in-out, visibility 0s;
+        }
+        .hero-image {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="logo">TravelEase</div>
+    
+        <div class="link">
+            <a href="index.html">Home</a>
+            <a href="search.html">Search</a>
+            <a href="about.html">About</a>
+            <a href="login.html">Login</a>
+        </div>
+    </header>
+    <div class="home">
+        <div class="home-content">
+          <h1>Welcome to <span class="highlight">TravelEase</span>: Your Gateway to the World</h1>
+          <p>Discover, Book, and Explore</p>
+          <button onclick="showHero()" class="common-btn">Take a break</button>
+        </div>
+    </div>
+    <div id="hero-section" >
+        <img src="images/he.jpg" alt="Hero Image" class="hero-image" />
+    </div>
+
+    <body>
+        <section class="testimonials">
+          <h2>Hear from Our Travelers</h2>
+          <div class="testimonials-cards">
+            <div class="testimonial-card">
+              <div class="traveler-image">
+                <img src="images/rahul.jpeg" alt="Rahul Desai">
+              </div>
+              <p class="message">"Booking my trip through this platform was so easy and seamless. The recommendations were spot-on, and I had a fantastic time exploring the mountains!"</p>
+              <div class="info">
+                <p class="name">Rahul Desai</p>
+                <p class="position">Adventure Enthusiast</p>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="traveler-image">
+                <img src="images/swati.jpg" alt="Swati Sharma">
+              </div>
+              <p class="message">"I was amazed by the deals offered here. I planned a family vacation, and everything from flights to stays was taken care of perfectly!"</p>
+              <div class="info">
+                <p class="name">Swati Sharma</p>
+                <p class="position">Family Traveler</p>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="traveler-image">
+                <img src="images/karan.jpeg" alt="Karan Singh">
+              </div>
+              <p class="message">"As a solo traveler, I rely on accurate planning and guides. This platform exceeded my expectations with its detailed itineraries and support."</p>
+              <div class="info">
+                <p class="name">Karan Singh</p>
+                <p class="position">Solo Traveler</p>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="traveler-image">
+                <img src="images/swara.jpeg" alt="Swara Patil">
+              </div>
+              <p class="message">"A wonderful experience! The platform's user-friendly interface and customer service made my beach vacation unforgettable."</p>
+              <div class="info">
+                <p class="name">Swara Patil</p>
+                <p class="position">Beach Lover</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </body>
+      
+    <footer>
+        <div className="footer-content">
+            <p>
+                &copy; 2024 <strong>TravelEase</strong>. All rights reserved.<br/>
+                Built with passion by <a href="ciresta.contact@gmail.com" target="_blank">
+                    Ciresta</a>.<br/>
+                Transforming curiosity into expertise.
+            </p>
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function showHero() {
+            const intro = document.querySelector('.home');
+            const hero = document.getElementById('hero-section');
+
+        
+            setTimeout(() => {
+                //intro.classList.add('hidden');
+                hero.classList.remove('hidden');
+                hero.classList.add('visible');
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
